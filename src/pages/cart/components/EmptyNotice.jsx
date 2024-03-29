@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 import { pageRoutes } from '@/apiRoutes';
 
+// 에러 컴포넌트가 조합됨 -> 하지만 홈으로 이동 기능만 있는 단순한 컴포넌트
+// 그렇기 때문에 하나의 독립적인 컴포넌트로 보고, 단위테스트를 작성할 수 있음.
 const EmptyNotice = () => {
   const navigate = useNavigate();
 
