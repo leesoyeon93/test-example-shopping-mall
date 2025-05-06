@@ -25,39 +25,41 @@ const CommonLayout = () => (
   </RootErrorBoundary>
 );
 
-const router = createBrowserRouter([
-  {
-    element: <CommonLayout />,
-    children: [
-      { path: pageRoutes.main, element: <Home />, errorElement: <ErrorPage /> },
-      {
-        path: pageRoutes.login,
-        element: <LoginPage />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: pageRoutes.register,
-        element: <RegisterPage />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: pageRoutes.productDetail,
-        element: <ProductDetail />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: pageRoutes.cart,
-        element: <Cart />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: pageRoutes.purchase,
-        element: <Purchase />,
-        errorElement: <ErrorPage />,
-      },
-      { path: '*', element: <NotFoundPage /> },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      element: <CommonLayout />,
+      children: [
+        { path: pageRoutes.main, element: <Home />, errorElement: <ErrorPage /> },
+        {
+          path: pageRoutes.login,
+          element: <LoginPage />,
+          errorElement: <ErrorPage />,
+        },
+        {
+          path: pageRoutes.register,
+          element: <RegisterPage />,
+          errorElement: <ErrorPage />,
+        },
+        {
+          path: pageRoutes.productDetail,
+          element: <ProductDetail />,
+          errorElement: <ErrorPage />,
+        },
+        {
+          path: pageRoutes.cart,
+          element: <Cart />,
+          errorElement: <ErrorPage />,
+        },
+        {
+          path: pageRoutes.purchase,
+          element: <Purchase />,
+          errorElement: <ErrorPage />,
+        },
+        { path: '*', element: <NotFoundPage /> },
+      ],
+    },
+  ],
+);
 
 export default router;

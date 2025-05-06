@@ -22,11 +22,10 @@ afterEach(() => {
 });
 
 afterAll(() => {
- // 모킹 모듈에 대한 모든 구현을 초기화한다.
+  // 모킹 모듈에 대한 모든 구현을 초기화한다.
   vi.resetAllMocks();
   server.close();
 });
-
 vi.mock('zustand');
 
 // https://github.com/vitest-dev/vitest/issues/821

@@ -6,10 +6,13 @@ import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 
-import productsJSON from './response/products.json' assert { type: 'json' };
-import categoriesJSON from './response/categories.json' assert { type: 'json' };
-import couponListJSON from './response/couponList.json' assert { type: 'json' };
-import usersJSON from './response/users.json' assert { type: 'json' };
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
+const productsJSON = require('./response/products.json');
+const categoriesJSON = require('./response/categories.json');
+const couponListJSON = require('./response/couponList.json');
+const usersJSON = require('./response/users.json');
 
 dotenv.config();
 

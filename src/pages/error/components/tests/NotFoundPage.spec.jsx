@@ -16,7 +16,7 @@ it('Home으로 이동 버튼 클릭시 홈 경로로 이동하는 navigate가 �
   const { user } = await render(<NotFoundPage />);
 
   // 버튼을 지정 => 뒤로 이동 이란 이름을 가진 버튼을 찾음
-  const button = await screen.getByRole('button', { name: '뒤로 이동' });
+  const button = await screen.getByRole('button', { name: 'Home으로 이동' });
 
   await user.click(button);
 
