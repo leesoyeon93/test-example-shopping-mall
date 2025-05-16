@@ -5,12 +5,13 @@ import cookieParser from 'cookie-parser';
 import fs from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
-import productsJSON from './response/products.json' assert { type: 'json' };
-import categoriesJSON from './response/categories.json' assert { type: 'json' };
-import couponListJSON from './response/couponList.json' assert { type: 'json' };
-import usersJSON from './response/users.json' assert { type: 'json' };
-
+const productsJSON = require('./response/products.json');
+const categoriesJSON = require('./response/categories.json');
+const couponListJSON = require('./response/couponList.json');
+const usersJSON = require('./response/users.json');
 dotenv.config();
 
 const EMAIL_PATTERN = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
