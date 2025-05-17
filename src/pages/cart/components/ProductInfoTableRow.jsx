@@ -12,6 +12,7 @@ import { MAX_CART_VALUE } from '@/constants';
 import { cartValidationMessages } from '@/messages';
 import { formatPrice } from '@/utils/formatter';
 
+// 상품명, 가격과 같은 정보을 보여주는 테이블의 행을 구성하는 컴포넌트
 const ProductInfoTableRow = ({
   item,
   user,
