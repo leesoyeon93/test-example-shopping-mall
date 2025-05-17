@@ -15,6 +15,11 @@ import { pageRoutes } from '@/apiRoutes';
 import { pathToUrl } from '@/helpers/url';
 import { formatPrice } from '@/utils/formatter';
 
+// product prop 기준으로 상품정보(상품명,가격,이미지)가 잘 렌더링되는지
+// onClickAddCartButton, onClickPurchaseButton 가 올바르게 동작하는지 -> 스파이 함수
+
+// 스파이 함수 호출 여부만 검증 -> 사용자가 ProductCard 를 눌렀을때의 동작은 검증 불가
+// API 에서 주는 데이터 기준으로 올바르게 렌더링 되는지도 검증 불가
 const ProductCard = ({
   product,
   onClickAddCartButton,

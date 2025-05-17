@@ -15,6 +15,8 @@ import { pick } from '@/utils/common';
 
 const PRODUCT_PAGE_LIMIT = 20;
 
+// 실제 앱에서 사용자와 상호 작용할 로직
+// 이벤트 핸들러 handleClickCart 로직 등이 있음
 const ProductList = ({ limit = PRODUCT_PAGE_LIMIT }) => {
   const navigate = useNavigate();
   const filter = useFilterStore(state =>

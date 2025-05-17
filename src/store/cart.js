@@ -41,10 +41,13 @@ const calculateTotal = cart =>
     { totalCount: 0, totalPrice: 0 },
   );
 
+// 장바구니 상품 정보는 로그인한 사용자와 매핑됩니다.
+// 앱 전반적으로 필요한 데이터이므로 zustand를 사용하여 전역 상태로 관리합니다.
 export const useCartStore = create(set => ({
   cart: {},
   totalCount: 0,
   totalPrice: 0,
+  // 예제에서는 db가 없으므로 로컬스토리지에 저장합니다.
   initCart: userId =>
     set(state => {
       if (!userId) {
