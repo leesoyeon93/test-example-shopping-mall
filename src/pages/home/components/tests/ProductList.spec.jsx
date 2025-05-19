@@ -33,7 +33,7 @@ it('로딩이 완료된 경우 상품 리스트가 제대로 모두 노출된다
   await render(<ProductList limit={PRODUCT_PAGE_LIMIT} />);
 
   // 'product-card' 테스트 ID를 가진 모든 요소를 찾습니다.
-  const productCards = screen.getAllByTestId('product-card');
+  const productCards = await screen.findAllByTestId('product-card');
 
   // 5개의 프로덕트 카드가 렌더링되었는지 확인합니다
   expect(productCards).toHaveLength(PRODUCT_PAGE_LIMIT);
